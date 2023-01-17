@@ -1,6 +1,7 @@
 import { Image, View, Text, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
 import FontAwesome5 from "react-native-vector-icons/dist/FontAwesome5";
 import { useNavigation } from "@react-navigation/native";
+import routes from "../constants/routes";
 
 const ItemDetails = ({ route }) => {
   const { navigate } = useNavigation();
@@ -18,7 +19,7 @@ const ItemDetails = ({ route }) => {
             className="w-full h-72 object-cover rounded-2xl"
           />
           <View className="absolute flex-row inset-x-0 top-5 justify-between px-6">
-            <TouchableOpacity onPress={() => navigate("discover")}
+            <TouchableOpacity onPress={() => navigate(routes.DISCOVER)}
                               className="w-10 h-10 rounded-md items-center justify-center bg-white">
               <FontAwesome5 name="angle-left" size={25} color="gray" />
             </TouchableOpacity>

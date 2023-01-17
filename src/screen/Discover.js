@@ -16,6 +16,7 @@ import { Attractions, Avatar, Hotels, Restaurants } from "../assets/images";
 
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import { getPlacesData } from "../api";
+
 import MenuContainer from "../components/MenuContainer";
 import ItemsCard from "../components/ItemsCard";
 
@@ -55,7 +56,7 @@ const Discover = () => {
           setIsLoading(false);
         }, 1200);
       });
-  }, [coordinates]);
+  }, [coordinates, type]);
 
   return (
     <SafeAreaView className="flex-1 bg-[#F8F8FF] relative">

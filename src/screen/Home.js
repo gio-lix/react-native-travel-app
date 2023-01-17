@@ -1,8 +1,11 @@
 import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
+
 import { Beech } from "../assets/images";
+
 import * as Animatable from "react-native-animatable";
+import routes from "../constants/routes";
 
 const Home = () => {
   const navigator = useNavigation();
@@ -43,7 +46,7 @@ const Home = () => {
         />
         <View className="absolute bottom-20 w-24  h-24 border-l-2 border-r-4 border-t-2 border-[#00BCC9] rounded-full items-center justify-center">
           <TouchableOpacity
-            onPress={() => navigator.navigate("discover")}
+            onPress={() => navigator.navigate(routes.DISCOVER)}
           >
             <Animatable.View
               animation="pulse"
